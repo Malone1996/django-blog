@@ -2,8 +2,12 @@ from django.conf.urls import url
 
 from . import views
 
+app_name = 'blog'
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
+    url(r'^$', views.IndexView.as_view(), name='index'),
+    url(r'^post/(?P<pk>[0-9]+)/$', views.PostDetailView.as_view(), name='detail'),
+    url(r'^archives/(?P<year>[0-9]{4})/(?P<month>[0-9]{1,2})/$', views.ArchivesView.as_view(), name='archives'),
+    url(r'^category/(?P<pk>[0-9]+)/$', views.CategoryView.as_view(), name='category'),
+    url(r'^tag/(?P<pk>[0-9]+)/$', views.TagView.as_view(), name='tag'),
+    # url(r'^search/$', views.search, name='search'),
 ]
-#我们首先从 django.conf.urls 导入了 url 函数，又从当前目录下导入了 views 模块。
-#然后我们把网址和处理函数的关系写在了 urlpatterns 列表里。

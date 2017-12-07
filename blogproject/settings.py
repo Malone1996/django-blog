@@ -21,10 +21,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'i3k%m-808v3_)^h7975iw4v&fl5chq41^19j@u+b*vx7dvw*q$'
 
-# SECURITY WARNING: don't run with debug turned on in production!
+# SECURITY WARNING: don't run with debug turned on in !
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost','120.78.174.186' ,'.mayaobo.top']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', '.mayaobo.site']
 
 # Application definition
 
